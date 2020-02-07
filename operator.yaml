@@ -325,7 +325,7 @@ rules:
   - watch
 ---
 # The rook system service account used by the operator, agent, and discovery pods
-apiVersion: apps/v1
+apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: rook-ceph-system
@@ -371,7 +371,7 @@ subjects:
   namespace: rook-ceph-system
 ---
 # The deployment for the rook operator
-apiVersion: apps/v1beta1
+apiVersion: v1
 kind: Deployment
 metadata:
   name: rook-ceph-operator
