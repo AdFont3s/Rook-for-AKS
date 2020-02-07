@@ -325,7 +325,7 @@ rules:
   - watch
 ---
 # The rook system service account used by the operator, agent, and discovery pods
-apiVersion: v1
+apiVersion: apps/v1
 kind: ServiceAccount
 metadata:
   name: rook-ceph-system
@@ -389,7 +389,7 @@ spec:
       serviceAccountName: rook-ceph-system
       containers:
       - name: rook-ceph-operator
-        image: rook/ceph:v0.9.2
+        image: rook/ceph:master
         args: ["ceph", "operator"]
         volumeMounts:
         - mountPath: /var/lib/rook
